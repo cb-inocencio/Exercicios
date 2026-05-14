@@ -4,36 +4,46 @@ valor1 = String(prompt("Insira jogada: "));
 valor2 = String(prompt("Insira jogada: "));
 //pratoNome = ""
 //pratoPreco = 0
-switch (prato) {
-    case 1:
-        console.log("O prato escolido foi BROWNIE R$10");
-        //pratoNome = "Brownie";
-        //pratoPreco = 10;
-        break;
-    case 2:
-        console.log("O prato escolido foi SORVETE R$5");
-        //pratoNome = "Sorvete";
-        //pratoPreco = 5;
-        break;
-    case 3:
-        console.log("O prato escolido foi BOLO R$12");
-        //pratoNome = "Bolo";
-        //pratoPreco = 12;
-        break;
-    case 4:
-        console.log("O prato escolido foi MILKSHAKE R$15");
-        //pratoNome = "Milkshake";
-        //pratoPreco = 15;
-        break;
-    case 5:
-        console.log("O prato escolido foi PETIT GATEAU R$13");
-        //pratoNome = "Petit Gateau";
-        //pratoPreco = 13;
-        break;
+switch (valor1) {
+    case 'pedra':
+        switch (valor2) {
+            case 'papel': 
+                console.log("O jogador 2 ganhou!")
+                break;
+            case 'tesoura':
+                console.log("O jogador 1 venceu!")
+                break;
+            case 'pedra':
+            default: 
+                console.log("Jogada inválida/Empate")
+        }
+    break;
+    case 'papel':
+        switch (valor2) {
+            case 'pedra': 
+                console.log("O jogador 2 ganhou!")
+                break;
+            case 'tesoura':
+                console.log("O jogador 1 venceu!")
+                break;
+            case 'papel':
+            default: 
+                console.log("Jogada inválida/Empate")
+        }
+    break;
+    case 'tesoura':
+        switch (valor2) {
+            case 'papel': 
+                console.log("O jogador 2 ganhou!")
+                break;
+            case 'pedra':
+                console.log("O jogador 1 venceu!")
+                break;
+            case 'tesoura':
+            default: 
+                console.log("Jogada inválida/Empate")
+        }
+    break;
     default:
-        console.log("Esse prato não existe");
-        //pratoNome = "Esse prato não existe";
-        //pratoPreco = null
+        console.log("Jogada invalida");
 }
-
-//console.log("O prato escolido foi " + pratoNome + " $" + pratoPreco);
